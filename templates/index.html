@@ -5,359 +5,226 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
 
   <title>Intern Alerts</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
 </head>
 
-<body>
+<body class="dark:bg-gray-900">
+  <header class="sticky top-0 z-10 pt-12 pb-10 backdrop-filter backdrop-blur
+                     dark:bg-primary dark:text-white">
+    <nav class="flex items-center justify-center h-16 font-semibold text-sm
+         after:absolute after:inset-x-0 after:w-full after:h-12 after:shadow-hr after:z-[-1]">
 
-  <div class="container">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+          <a href="/" class="flex items-center">
+            <img src="static/logo.png" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo">
+            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Your logo</span>
+          </a>
+          <div class="flex md:order-2">
+            <!-- <button type="button"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get
+              started</button> -->
+              <button class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                type="button">
+                🔔 Get alerts
+              </button>
 
 
 
-    <nav class="navbar navbar-light bg-light justify-content-between mt-2 mb-5">
-      <a class="navbar-brand">😲 Intern Alerts</a>
-
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-        🔔 Get alerts 
-      </button>
-    </nav>
 
 
-
-
-    <!-- Button trigger modal -->
-
-    
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Receive an alert as soon as an M&A internship appears!</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+            <button data-collapse-toggle="navbar-sticky" type="button"
+              class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-sticky" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"></path>
+              </svg>
             </button>
           </div>
-          <div class="modal-body">
+          <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <ul
+              class="flex flex-col p-4 mt-4 border rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0  dark:border-gray-700">
 
-
-
-
-            <form>
-              <div class="form-group">
-                <label for="exampleFormControlInput1">Enter your e-mail address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="best.intern@school.edu">
-              </div>
-            </form>
-            
-
-
-
-
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-primary">Register</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-    <div class="card">
-      <div class="card-body">
-        <div class="row text-center align-items-center">
-          <div class="col">
-            <img src="https://design.gs.com/downloads/Goldman_Sachs_Blue_Box.png" alt="" width="20%">
-            <p>Goldman Sachs</p>
-          </div>
-          <div class="col">
-            2023 Summer Analyst Intern Programme
-          </div>
-          <div class="col">
-            <a href="https://www.goldmansachs.com/careers/students/programs/emea/summer-analyst-programme.html" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-arrow-up-right"
-              viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-              <path fill-rule="evenodd"
-                d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-            </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-      <div class="card">
-        <div class="card-body">
-          <div class="row text-center align-items-center">
-            <div class="col">
-              <img src="https://morganstanley.tal.net/SAN/live/bespoke/system/341/4cbf01c5-2b25-46a1-a6bb-3ca2759bd03c/css/brand/2//img/logo_MorganStanley.png" alt="" width="20%">
-              <p>Morgan Stanley</p>
-            </div>
-            <div class="col">
-              2023 Investment Banking Full Time Analyst Programme (Frankfurt)
-            </div>
-            <div class="col">
-              <a href="https://morganstanley.tal.net/vx/candidate/apply/13205"
-                target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                  class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-                  <path fill-rule="evenodd"
-                    d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-            <div class="card">
-              <div class="card-body">
-                <div class="row text-center align-items-center">
-                  <div class="col">
-                    <img src="https://design.gs.com/downloads/Goldman_Sachs_Blue_Box.png" alt="" width="20%">
-                    <p>Goldman Sachs</p>
-                  </div>
-                  <div class="col">
-                    2023 Summer Analyst Intern Programme
-                  </div>
-                  <div class="col">
-                    <a href="https://www.goldmansachs.com/careers/students/programs/emea/summer-analyst-programme.html"
-                      target="_blank">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                        class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+              <li>
+                <div class="flex items-center">
+                  <label for="simple-search" class="sr-only">Search</label>
+                  <div class="relative w-full">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                      <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
-                          d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-                        <path fill-rule="evenodd"
-                          d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+                          d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                          clip-rule="evenodd"></path>
                       </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-
-
-
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row text-center align-items-center">
-                      <div class="col">
-                        <img src="https://design.gs.com/downloads/Goldman_Sachs_Blue_Box.png" alt="" width="20%">
-                        <p>Goldman Sachs</p>
-                      </div>
-                      <div class="col">
-                        2023 Summer Analyst Intern Programme
-                      </div>
-                      <div class="col">
-                        <a href="https://www.goldmansachs.com/careers/students/programs/emea/summer-analyst-programme.html"
-                          target="_blank">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                              d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-                            <path fill-rule="evenodd"
-                              d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-                          </svg>
-                        </a>
-                      </div>
                     </div>
+                    <input type="text" id="simple-search"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Search" required>
                   </div>
+                  
+                    <span class="sr-only">Search</span>
+                  </button>
                 </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        </nav>
+  </header>
 
 
 
 
-
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="row text-center align-items-center">
-                          <div class="col">
-                            <img src="https://design.gs.com/downloads/Goldman_Sachs_Blue_Box.png" alt="" width="20%">
-                            <p>Goldman Sachs</p>
-                          </div>
-                          <div class="col">
-                            2023 Summer Analyst Intern Programme
-                          </div>
-                          <div class="col">
-                            <a href="https://www.goldmansachs.com/careers/students/programs/emea/summer-analyst-programme.html"
-                              target="_blank">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                  d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-                                <path fill-rule="evenodd"
-                                  d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-
-
-
-
-
-                        <div class="card">
-                          <div class="card-body">
-                            <div class="row text-center align-items-center">
-                              <div class="col">
-                                <img src="https://design.gs.com/downloads/Goldman_Sachs_Blue_Box.png" alt="" width="20%">
-                                <p>Goldman Sachs</p>
-                              </div>
-                              <div class="col">
-                                2023 Summer Analyst Intern Programme
-                              </div>
-                              <div class="col">
-                                <a href="https://www.goldmansachs.com/careers/students/programs/emea/summer-analyst-programme.html"
-                                  target="_blank">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                                    class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                      d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-                                    <path fill-rule="evenodd"
-                                      d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-                                  </svg>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-
-
-
-
-
-                            <div class="card">
-                              <div class="card-body">
-                                <div class="row text-center align-items-center">
-                                  <div class="col">
-                                    <img src="https://design.gs.com/downloads/Goldman_Sachs_Blue_Box.png" alt="" width="20%">
-                                    <p>Goldman Sachs</p>
-                                  </div>
-                                  <div class="col">
-                                    2023 Summer Analyst Intern Programme
-                                  </div>
-                                  <div class="col">
-                                    <a href="https://www.goldmansachs.com/careers/students/programs/emea/summer-analyst-programme.html"
-                                      target="_blank">
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                                        class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd"
-                                          d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-                                        <path fill-rule="evenodd"
-                                          d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-                                      </svg>
-                                    </a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-
-
-
-
-
-
-                                <div class="card">
-                                  <div class="card-body">
-                                    <div class="row text-center align-items-center">
-                                      <div class="col">
-                                        <img src="https://design.gs.com/downloads/Goldman_Sachs_Blue_Box.png" alt="" width="20%">
-                                        <p>Goldman Sachs</p>
-                                      </div>
-                                      <div class="col">
-                                        2023 Summer Analyst Intern Programme
-                                      </div>
-                                      <div class="col">
-                                        <a href="https://www.goldmansachs.com/careers/students/programs/emea/summer-analyst-programme.html"
-                                          target="_blank">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                                            class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                              d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-                                            <path fill-rule="evenodd"
-                                              d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-                                          </svg>
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-
-
-
-
-
-
-                                    <div class="card">
-                                      <div class="card-body">
-                                        <div class="row text-center align-items-center">
-                                          <div class="col">
-                                            <img src="https://design.gs.com/downloads/Goldman_Sachs_Blue_Box.png" alt="" width="20%">
-                                            <p>Goldman Sachs</p>
-                                          </div>
-                                          <div class="col">
-                                            2023 Summer Analyst Intern Programme
-                                          </div>
-                                          <div class="col">
-                                            <a href="https://www.goldmansachs.com/careers/students/programs/emea/summer-analyst-programme.html"
-                                              target="_blank">
-                                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                                                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd"
-                                                  d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-                                                <path fill-rule="evenodd"
-                                                  d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-                                              </svg>
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-
-
-
+<div class="mt-8">
+<div class="flex justify-center my-8">
+<a href="https://www.goldmansachs.com/careers/students/programs/emea/summer-analyst-programme.html" target="_blank"
+  class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+  <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Goldman_Sachs.svg/1200px-Goldman_Sachs.svg.png" alt="">
+  <div class="flex flex-col justify-between p-4 leading-normal">
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+      2023 Summer Analyst Intern Programme
+    </h5>
+    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+      Goldman Sachs
+    </p>
   </div>
+</a>
+</div>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+<div class="flex justify-center my-8">
+  <a href="https://careers.jpmorgan.com/global/en/students/programs/investment-banking-summer-analyst" target="_blank"
+    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+      src="https://logo-marque.com/wp-content/uploads/2021/02/JP-Morgan-Chase-Logo.png"
+      alt="">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        Investment Banking Analyst Program
+      </h5>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        J.P. Morgan
+      </p>
+    </div>
+  </a>
+</div>
+
+<div class="flex justify-center my-8">
+  <a href="https://jobs.citi.com/job/paris/2023-emea-corporate-banking-intern-analyst-paris-europe-middle-east-and-africa-july-intake/287/43976911152" target="_blank"
+    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Citi.svg/1200px-Citi.svg.png"
+      alt="">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        2023, EMEA, Corporate Banking, Intern Analyst Paris (Europe, Middle East and Africa) - July Intake
+      </h5>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        Citi
+      </p>
+    </div>
+  </a>
+</div>
+
+<div class="flex justify-center my-8">
+  <a href="https://jobs.citi.com/job/paris/2023-emea-corporate-banking-intern-analyst-paris-europe-middle-east-and-africa-july-intake/287/43976911152"
+    target="_blank"
+    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Citi.svg/1200px-Citi.svg.png" alt="">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        2023, EMEA, Corporate Banking, Intern Analyst Paris (Europe, Middle East and Africa) - July Intake
+      </h5>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        Citi
+      </p>
+    </div>
+  </a>
+</div>
+
+<div class="flex justify-center my-8">
+  <a href="https://jobs.citi.com/job/paris/2023-emea-corporate-banking-intern-analyst-paris-europe-middle-east-and-africa-july-intake/287/43976911152"
+    target="_blank"
+    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Citi.svg/1200px-Citi.svg.png" alt="">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        2023, EMEA, Corporate Banking, Intern Analyst Paris (Europe, Middle East and Africa) - July Intake
+      </h5>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        Citi
+      </p>
+    </div>
+  </a>
+</div>
+
+<div class="flex justify-center my-8">
+  <a href="https://jobs.citi.com/job/paris/2023-emea-corporate-banking-intern-analyst-paris-europe-middle-east-and-africa-july-intake/287/43976911152"
+    target="_blank"
+    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Citi.svg/1200px-Citi.svg.png" alt="">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        2023, EMEA, Corporate Banking, Intern Analyst Paris (Europe, Middle East and Africa) - July Intake
+      </h5>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        Citi
+      </p>
+    </div>
+  </a>
+</div>
+
+<div class="flex justify-center my-8">
+  <a href="https://jobs.citi.com/job/paris/2023-emea-corporate-banking-intern-analyst-paris-europe-middle-east-and-africa-july-intake/287/43976911152"
+    target="_blank"
+    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Citi.svg/1200px-Citi.svg.png" alt="">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        2023, EMEA, Corporate Banking, Intern Analyst Paris (Europe, Middle East and Africa) - July Intake
+      </h5>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        Citi
+      </p>
+    </div>
+  </a>
+</div>
+
+<div class="flex justify-center my-8">
+  <a href="https://jobs.citi.com/job/paris/2023-emea-corporate-banking-intern-analyst-paris-europe-middle-east-and-africa-july-intake/287/43976911152"
+    target="_blank"
+    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Citi.svg/1200px-Citi.svg.png" alt="">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        2023, EMEA, Corporate Banking, Intern Analyst Paris (Europe, Middle East and Africa) - July Intake
+      </h5>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        Citi
+      </p>
+    </div>
+  </a>
+</div>
+
+
+
+
+</div>
+
+
 </body>
 
 </html>
